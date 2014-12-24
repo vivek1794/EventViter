@@ -1,9 +1,10 @@
- <html>
+ <!DOCTYPE html>
     <head>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
       <script type="text/javascript" src="script/jquery.js"></script>
+      <script type="text/javascript" src="script/script.js"></script>
     </head>    
     <body>
       <!-- menu -->
@@ -28,7 +29,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
         //var url="http://www.webviander.com/eventViterServer/getCelebrations.php";
-        var url="http://localhost/eventViterServer/getCelebrations.php";        
+        var url=domain+"eventViterServer/getCelebrations.php";        
         $.getJSON(url,function(data){
         if(data.events.length != 0)
         {
@@ -78,7 +79,6 @@ $(document).ready(function(){
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-      <script type="text/javascript" src="script/script.js"></script>
       <script type="text/javascript" src="script/pace.min.js"></script>
 
     </body>

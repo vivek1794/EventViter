@@ -4,6 +4,7 @@
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
       <script type="text/javascript" src="script/jquery.js"></script>
+            <script type="text/javascript" src="script/script.js"></script>
     </head>    
     <body>
       <!-- menu -->
@@ -27,7 +28,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-        var url="http://localhost/eventViterServer/getMeetings.php";
+        var url=domain+"eventViterServer/getMeetings.php";
         $.getJSON(url,function(data){
         if(data.events.length != 0)
         {

@@ -1,6 +1,10 @@
-/***
+/***************************************************************************************
 To parse the URL
-****/
+
+Usage: getUrlVars() --> returns all the url query terms as object
+        getUrlvar('id'); --> returns the value for the key named 'id'
+***************************************************************************************/
+
 $.extend({
   getUrlVars: function(){
     var vars = [], hash;
@@ -19,6 +23,7 @@ $.extend({
 
     return vars;
   },
+
   getUrlVar: function(name){
     return $.getUrlVars()[name];
   }

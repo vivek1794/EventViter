@@ -1,0 +1,85 @@
+ <html>
+    <head>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+<script type="text/javascript">
+  
+  var history_api = typeof history.pushState !== 'undefined'
+
+// The previous page asks that it not be returned to
+if ( location.hash == '#no-back' ) {
+  if ( history_api ) history.pushState(null, '', '#stay')
+  else location.hash = '#stay'
+  window.onhashchange = function() {
+    if ( location.hash == '#no-back' ) {
+      $('#goodbye').hide();      
+      $('#noback').show();
+      if ( history_api ) history.pushState(null, '', '#stay')
+      else location.hash = '#stay'
+    }
+  }
+}
+</script>
+    </head>
+    <body>
+    <div class="row" id="goodbye">
+    <div class="col s12">
+        <div class="card small">
+          <div class="card-content">
+            <span class="card-title">Good Bye!</span>
+            <p> You have been logged out successfully :) Login again to check back the events!</p>
+          </div>
+        </div>
+      </div>    
+</div>
+    <div class="row" id="notvalid">
+    <div class="col s12">
+        <div class="card small">
+          <div class="card-content">
+            <span class="card-title">Oops :(</span>
+            <p> The credentials you entered were wrong. Please try again with proper credentials :)</p>
+          </div>
+        </div>
+      </div>    
+</div>
+    <div class="row" id="noback">
+    <div class="col s12">
+        <div class="card small">
+          <div class="card-content">
+            <span class="card-title">You Shall Not Pass!</span>
+            <p> You pressed the back button. It is illegal that you did so! We could not display invites unless you login to your account! Kindly login to view the invites which you received :)</p>
+          </div>
+        </div>
+      </div>    
+</div>
+      <!-- The login Card -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card small">
+          <div class="card-content">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="uname" type="text" placeholder="email id" required>
+              </div>
+              <div class="input-field col s12">
+                <input id="passwd" type="password" placeholder="password" required>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a onclick="validate()">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>      
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="script/jquery.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      <script type="text/javascript" src="script/script.js"></script>
+
+    </body>
+  </html>
+        

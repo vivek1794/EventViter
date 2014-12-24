@@ -21,7 +21,7 @@ This application is in its initial phase and following functions are present
 The contents are dynamically fetched from the DB using PHP, JSON and jQuery. 
 
 Future plans for the application
-====== ===== === === ===========
+=================================
 
 following features are planned to be released 
 1. notifications to the users	
@@ -38,7 +38,7 @@ following features are planned to be released
 12. Ability for users to register on the application directly
 
 How to work with the source code
-=== == ==== ==== === ====== ====
+================================
 
 You have to make two changes for it to work properly in your environment
 
@@ -54,7 +54,7 @@ You have to make two changes for it to work properly in your environment
 	
 
 Note from the developer
-==== ==== === =========
+========================
 This is the web folder for the EventViter App. Suitable mechanism like PhoneGap should be used to port to mobile applications. This is not created with Desktop computers in mind. So if you want to take a preview resize the browser ;)
 
 Any changes to the code to improve the efficiency or adding new features to the application are welcome. If anyone is interested in developing a native android application, contact me :)
